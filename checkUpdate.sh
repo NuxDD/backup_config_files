@@ -6,6 +6,7 @@ USER=`whoami`
 GREEN='\033[0;32m'
 NC='\033[0m'
 RED='\033[0;31m'
+PUSHFLAG=0
 
 function check {
 	repoDate=$(stat -c %Y "./files/$1")
@@ -17,6 +18,7 @@ function check {
 		# Need to touch in order to get the up-to-date for later
 		cp /home/$USER/$1 ./files/ & touch /home/$USER/$1
 		git add ./files/$1
+		PUSHFLAG=1
 	else
 		echo -e "${RED} The local $1 is outdated, please use the associated script to update it. ${NC}"
 	fi
@@ -26,7 +28,9 @@ function check {
 if type git > /dev/null; then
 	check .bashrc
 	check .vimrc
+	if [[ $PUSHFLAG -ne 0 ]]; then
+		git commit -m "update config files"
+		git push
+		PUSHFLAG=0
+	fi
 fi
-
-git commit -m "update config files"
-git push
