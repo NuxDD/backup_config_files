@@ -12,8 +12,14 @@ For the `vimSetup.sh` script :
 * cmake
 * python3
 
+For the `checkUpdate.sh` script :
+
+* git
+
 Usage 
 -----
+
+All scripts are supposed to be executed from the root of the repo.
 
 Dependencies installation and usage of `vimSetup.sh` on ArchLinux :
 

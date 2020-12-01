@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# This script is only to check if config files have been updated to update the files on the repo, don't use it.
+# This script is only to check if local config files have been updated to update the files on the repo, don't use it.
 
 USER=`whoami`
 GREEN='\033[0;32m'
@@ -22,8 +22,11 @@ function check {
 	fi
 }
 
-check .bashrc
-check .vimrc
+# Simple sanity check about the dependency
+if type git > /dev/null; then
+	check .bashrc
+	check .vimrc
+fi
 
 git commit -m "update config files"
 git push
