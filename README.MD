@@ -23,3 +23,4 @@ Todos and issues
 ----------------
 
 * Add the statusline install in `vimSetup.sh`
+* Add the tmux installation/configuration (and open tmux in .bashrc while opening terminal)
