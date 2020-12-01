@@ -1,5 +1,5 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+# ~/.bashrc: executed by bash(1) for non-login shells. 
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc) 
 # for examples
 
 # If not running interactively, don't do anything
@@ -117,4 +117,4 @@ if ! shopt -oq posix; then
 fi
 
 # enable the X display on Windows with de Xserv software
-export DISPLAY=localhost:0.0
+export DISPLAY=localhost:0.0 

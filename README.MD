@@ -24,3 +24,4 @@ Todos and issues
 
 * Add the statusline install in `vimSetup.sh`
 * Add the tmux installation/configuration (and open tmux in .bashrc while opening terminal)
+* Rewrite the `checkUpdate.sh` function to add path (exemple : the .ycm_extra_conf.py isn't on ~/)
