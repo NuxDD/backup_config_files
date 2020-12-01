@@ -1,7 +1,7 @@
-ckup of configuration files
+Backup of configuration files
 ==============================
 
-Simply a backup from various configurations files and scripts to install plugins etc..
+Simply a backup from various configuration files and scripts to install plugins etc..
 
 Dependencies
 ------------
