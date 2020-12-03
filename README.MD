@@ -2,6 +2,7 @@ Backup of configuration files
 ==============================
 
 Simply a backup from various configuration files and scripts to install plugins etc..
+I made the choice to write scripts as bash instead of zsh since it is the default shell of most of the main linux distro.
 
 Dependencies
 ------------
