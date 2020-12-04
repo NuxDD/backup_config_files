@@ -29,6 +29,8 @@ export PATH="/usr/local/bin:$PATH"
 export PROMPT="%F{8}%B{%T}>%b%f %F{40}%n%f %B%F{8}at%f%b %F{40}%d%f"$'\n'"$ "
 
 #enable the X display on Windows with the Xserv software (only for WSL2)
-export DISPLAY=localhost:0.0 
+if grep -q Microsoft /proc/version; then
+	export DISPLAY=localhost:0.0 
+fi
 
 
