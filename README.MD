@@ -31,3 +31,4 @@ Todos and issues
 ----------------
 
 * Rewrite the `checkUpdate.sh` function to add path (exemple : the .ycm_extra_conf.py isn't on ~/)
+* Fix the UNC path not supported in `initialSetup.sh`

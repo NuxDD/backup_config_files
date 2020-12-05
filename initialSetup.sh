@@ -4,12 +4,11 @@ USER=`whoami`
 
 # initial setup for WSL2 on W10
 if grep -q Microsoft /proc/version; then
-	$WUSER=$(/mnt/c/Windows/System32/cmd.exe /c 'echo %USERNAME%')
+	WUSER=$(/mnt/c/Windows/System32/cmd.exe /c 'echo %USERNAME%' | sed -e 's/\r//g')
 	ln -s "/mnt/c/Users/${WUSER}" ~/winhome
 	if [ ! -d "/mnt/c/Users/$WUSER/repos" ]; then
-		mkdir "/mnt/c/Users/$WUSER/repos"
+		ln -s "/mnt/c/Users/${WUSER}/repos" ~/repos
 	fi
-	ln -s "/mnt/c/Users/${WUSER}repos" ~/repos
 else
 	# just a sanity check to create the repos folder on a native Linux system
 	if [ ! -d ~/repos ]; then
@@ -27,7 +26,7 @@ cp ./files/.ycm_extra_conf.py ~/repos & touch -m ./files/.ycm_extra_conf.py
 if type zsh > /dev/null; then
 	chsh -s $(which zsh)
 	cp ./files/.zshrc ~/ & touch -m ./files/.zshrc
-	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git /usr/share/zsh/
+	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git /usr/share/zsh/zsh-syntax-highlighting
 fi
 
 # if tmux is installed, copy the config file
