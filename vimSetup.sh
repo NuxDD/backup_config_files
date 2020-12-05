@@ -8,6 +8,10 @@ if type vim git cmake python3 > /dev/null; then
 
 	USER=`whoami`
 
+	if [[ ! -d /home/$USER/.vim/bundle/ ]]; then
+		mkdir /home/$USER/.vim/bundle/
+	fi
+
 	# Copy of the .vimrc
 	echo -e "${GREEN} Copying the .vimrc.. ${NC}"
 	cp ./files/.vimrc /home/$USER/.vim
