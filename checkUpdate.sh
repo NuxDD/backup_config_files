@@ -16,7 +16,7 @@ function check {
 	elif [[ $repoDate -lt $localDate ]]; then
 		echo -e "${GREEN} Updating $1.. ${NC}"
 		# Need to touch in order to get the up-to-date for later
-		cp /home/$USER/$1 ./files/ & touch /home/$USER/$1
+		cp /home/$USER/$1 ./files/ & touch -m /home/$USER/$1
 		git add ./files/$1
 		PUSHFLAG=1
 	else
@@ -26,7 +26,7 @@ function check {
 
 # Simple sanity check about the dependency
 if type git > /dev/null; then
-	check .bashrc
+	check .zshrc
 	check .vimrc
 	if [[ $PUSHFLAG -ne 0 ]]; then
 		git commit -m "update config files"

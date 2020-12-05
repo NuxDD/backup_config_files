@@ -45,6 +45,11 @@ if type vim git cmake python3 > /dev/null; then
 	echo -e "${GREEN} Installing vim-cpp-enhanced-highlight plugin..${NC}"
 	git clone https://github.com/octol/vim-cpp-enhanced-highlight /home/$USER/.vim/bundle/vim-cpp-enhanced-highlight
 
+	# Install statusline plugin
+	echo -e "${GREEN} Installing the status line..${NC}"
+	git clone https://github.com/vim-airline/vim-airline /home/$USER/.vim/bundle/vim-airline
+	git clone https://github.com/vim-airline/vim-airline-themes /home/$USER/.vim/bundle/vim-airline-themes
+
 	#TODO: need to add the statusline install
 	echo -e "${GREEN} Done. ${NC}"
 
