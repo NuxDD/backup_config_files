@@ -9,12 +9,12 @@ if type vim git cmake python3 > /dev/null; then
 	USER=`whoami`
 
 	if [[ ! -d /home/$USER/.vim/bundle/ ]]; then
-		mkdir /home/$USER/.vim/bundle/
+		mkdir -p /home/$USER/.vim/bundle/
 	fi
 
 	# Copy of the .vimrc
 	echo -e "${GREEN} Copying the .vimrc.. ${NC}"
-	cp ./files/.vimrc /home/$USER/.vim
+	cp ./files/.vimrc /home/$USER/.vimrc
 	
 	# Add undodir for the vim option -- look at .vimrc
 	echo -e "${GREEN} Configuring undodir..${NC}"
@@ -39,7 +39,7 @@ if type vim git cmake python3 > /dev/null; then
 	python3 /home/$USER/.vim/bundle/YouCompleteMe/install.py --clang-completer
 	cd ~
 	mkdir -p /home/$USER/repos
-	cp ./files/.ycm_extra_conf.py /home/$USER/repos
+	cp ./files/.ycm_extra_conf.py /home/$USER/repos/.ycm_extra_conf.py
 
 	# Install NerdTree plugin
 	echo -e "${GREEN} Installing NerdTree plugin..${NC}"

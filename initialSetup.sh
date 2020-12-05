@@ -31,5 +31,5 @@ fi
 
 # if tmux is installed, copy the config file
 if type tmux > /dev/null; then
-	cp ./files/.tmux.conf ~/ & touch -m ./files/.vimrc
+	cp ./files/.tmux.conf ~/ & touch -m ./files/.tmux.conf
 fi
