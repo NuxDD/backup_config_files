@@ -75,4 +75,4 @@ if grep -q Microsoft /proc/version; then
 fi
 
 #load the syntax highlighting
-source /usr/share/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2> /dev/null
+source ~/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2> /dev/null
