@@ -29,7 +29,7 @@ if type zsh > /dev/null; then
 	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git /usr/share/zsh/
 fi
 
-# if tmux is installed, copy the config file to home
+# if tmux is installed, copy the config file
 if type tmux > /dev/null; then
 	cp ./files/.tmux.conf ~/ & touch -m ./files/.vimrc
 fi
