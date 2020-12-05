@@ -52,7 +52,7 @@ autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
 # Alias section
-alias ls="ls -Al --color=auto"
+alias ls="ls -Ahl --color=auto"
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias reload="source ~/.zshrc"
