@@ -28,3 +28,8 @@ if type zsh > /dev/null; then
 	cp ./files/.zshrc ~/ & touch -m ./files/.zshrc
 	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git /usr/share/zsh/
 fi
+
+# if tmux is installed, copy the config file to home
+if type tmux > /dev/null; then
+	cp ./files/.tmux.conf ~/ & touch -m ./files/.vimrc
+fi
