@@ -13,6 +13,7 @@ For the `vimSetup.sh` script :
 * git
 * cmake
 * python3
+* wget
 
 For the `checkUpdate.sh` script :
 
@@ -31,4 +32,3 @@ Todos and issues
 ----------------
 
 * Rewrite the `checkUpdate.sh` function to add path (exemple : the .ycm_extra_conf.py isn't on ~/)
-* Fix the UNC path not supported in `initialSetup.sh`
