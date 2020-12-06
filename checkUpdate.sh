@@ -28,6 +28,7 @@ function check {
 if type git > /dev/null; then
 	check .zshrc
 	check .vimrc
+	check .tmux.conf
 	if [[ $PUSHFLAG -ne 0 ]]; then
 		git commit -m "update config files"
 		git push
