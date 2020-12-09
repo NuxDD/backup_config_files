@@ -53,6 +53,7 @@ bindkey '^e' edit-command-line
 
 # Alias section
 alias ls="ls -Ahl --color=auto"
+alias grep='grep -n --color=auto'
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias reload="source ~/.zshrc"
