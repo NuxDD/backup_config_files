@@ -13,6 +13,7 @@ nnoremap <leader>p "+p<CR>
 
 nnoremap <silent><leader>gd :YcmCompleter GoTo<CR>
 nnoremap <silent><leader>gf :YcmCompleter FixIt<CR>
+nnoremap <silent><leader>d	:YcmCompleter GetDoc<CR>
 
 nmap <F1> :NERDTreeToggle<CR>
 
@@ -24,6 +25,9 @@ map <Down> <Nop>
 " No delay after pressing the Esc key
 set timeoutlen=1000
 set ttimeoutlen=0
+
+" Five more frequent updates than by defaults
+set updatetime=750
 
 " Display the line number, normal for the current line, relative for the others (hybrid line number)
 set relativenumber
@@ -79,7 +83,7 @@ filetype plugin indent on
 let g:clang_library_path='/usr/lib/llvm-10/lib'
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_error_symbol = '>>'
-let g:ycm_warning_symbol = '--'
+let g:ycm_warning_symbol = '->'
 let g:ycm_confirm_extra_conf = 0
 
 " Options for vim-airline plugin
