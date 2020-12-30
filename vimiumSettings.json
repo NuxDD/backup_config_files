@@ -1,0 +1,28 @@
+{
+	"name": "Vimium C",
+	"@time": "12/30/2020, 6:24:38 AM",
+	"time": 1609305878304,
+	"environment": {
+		"extension": "1.87.2",
+		"platform": "linux"
+	},
+	"searchEngines": [
+		"g: https://www.google.com/search?q=%s \\",
+		"  www.google.com re=/^(?:\\.[a-z]{2,4})?\\/search\\b.*?[#&?]q=([^#&]*)/i\\",
+		"  blank=https://www.google.com/ Google",
+		"",
+		"y|yt: https://www.youtube.com/results?search_query=%s \\",
+		"  blank=https://www.youtube.com/ YouTube",
+		"",
+		"w: https://www.wikipedia.org/w/index.php?search=%s Wikipedia",
+		"",
+		"gs|gscholar: https://scholar.google.com/scholar?q=$s \\",
+		"  scholar.google.com re=/^(?:\\.[a-z]{2,4})?\\/scholar\\b.*?[#&?]q=([^#&]*)/i\\",
+		"  blank=https://scholar.google.com/ Google Scholar",
+		"",
+		"gh|github: https://github.com/search?q=$s \\",
+		"  blank=https://github.com/ GitHub Repo",
+		""
+	],
+	"searchUrl": "https://duckduckgo.com/?q=$s DuckDuckGo"
+}
