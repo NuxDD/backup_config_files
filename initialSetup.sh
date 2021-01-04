@@ -32,7 +32,7 @@ if type zsh > /dev/null; then
 	echo -e "${GREEN} Setting up zsh.. ${NC}"
 	chsh -s $(which zsh)
 	cp ./files/.zshrc ~/ & touch -m ./files/.zshrc
-	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/zsh/zsh-syntax-highlighting
+	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
 fi
 
 # if tmux is installed, copy the config file
