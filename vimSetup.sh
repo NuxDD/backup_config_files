@@ -4,7 +4,7 @@ RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m'
 
-if type vim git cmake python3 wget > /dev/null; then
+if type vim git cmake python3 wget make gcc > /dev/null; then
 
 	USER=`whoami`
 
