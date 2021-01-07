@@ -28,7 +28,7 @@ cp ./files/.ycm_extra_conf.py ~/repos/ & touch -m ./files/.ycm_extra_conf.py
 
 # set zsh as the default shell if it is installed on the system
 # copy the config file and install the zsh-syntax-highlighting
-if type zsh > /dev/null; then
+if type zsh which > /dev/null; then
 	echo -e "${GREEN} Setting up zsh.. ${NC}"
 	chsh -s $(which zsh)
 	cp ./files/.zshrc ~/ & touch -m ./files/.zshrc
