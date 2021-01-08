@@ -92,5 +92,8 @@ let g:airline_theme='term'
 " Options for NERDTree plugin
 let NERDTreeQuitOnOpen = 1
 
+" Save the .viminfo file to .vim/
+set viminfo+=n~/.vim/viminfo
+
 " Hide the show mode, ie --INSERT--, --VISUAL-- and so on (need to be at the end of .vimrc, I don't know why)
 set noshowmode
